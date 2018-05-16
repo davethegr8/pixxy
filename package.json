@@ -8,10 +8,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "./index.js"
   },
   "bin": {
-    "itap": "node index.js"
+    "itap": "./index.js"
   },
   "keywords": [],
   "author": "davethegr8@gmail.com",
