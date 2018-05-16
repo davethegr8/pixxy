@@ -11,7 +11,7 @@
     "start": "node index.js"
   },
   "bin": {
-    "itap": "index.js"
+    "itap": "node index.js"
   },
   "keywords": [],
   "author": "davethegr8@gmail.com",
