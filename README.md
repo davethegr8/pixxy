@@ -50,3 +50,11 @@ Downloading Chromium r555668 - 76.4 Mb [====================] 100% 0.0s
 995ms saved example-com-2018-05-16T21-22-30-982Z.png
 995ms closing browser
 ```
+
+### Global install
+
+```
+» npm i -g pixxy
+» pixxy
+964ms saved example-com-2018-05-16T21-18-57-904Z.png
+```
