@@ -1,9 +1,9 @@
 {
-  "name": "@dten/itap",
+  "name": "pixxy",
   "version": "0.1.0",
   "repository": {
     "type" : "git",
-    "url" : "https://github.com/davethegr8/itap.git"
+    "url" : "https://github.com/davethegr8/pixxy.git"
   },
   "description": "",
   "main": "index.js",
