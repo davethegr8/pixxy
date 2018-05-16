@@ -7,7 +7,12 @@
   },
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "bin": {
+    "itap": "index.js"
+  },
   "keywords": [],
   "author": "davethegr8@gmail.com",
   "license": "",
