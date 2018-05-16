@@ -1,0 +1,18 @@
+{
+  "name": "@dten/itap",
+  "version": "0.1.0",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/davethegr8/itap.git"
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "davethegr8@gmail.com",
+  "license": "",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "puppeteer": "^1.4.0"
+  }
+}
