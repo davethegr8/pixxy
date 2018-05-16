@@ -1,4 +1,4 @@
-# davethegr8/itap
+# pixxy
 
 Takes a picture of a webpage using Puppeteer
 
@@ -7,7 +7,7 @@ Takes a picture of a webpage using Puppeteer
 The simplest version:
 
 ```
-» npx github:davethegr8/itap
+» npx pixxy
 Downloading Chromium r555668 - 76.4 Mb [====================] 100% 0.0s
 964ms saved example-com-2018-05-16T21-18-57-904Z.png
 ```
@@ -19,7 +19,7 @@ Arguments:
 The page you want to screenshot
 
 ```
-» npx github:davethegr8/itap --url http://example.com
+» npx pixxy --url http://example.com
 Downloading Chromium r555668 - 76.4 Mb [====================] 100% 0.0s
 934ms saved example-com-2018-05-16T21-20-51-702Z.png
 ```
@@ -29,7 +29,7 @@ Downloading Chromium r555668 - 76.4 Mb [====================] 100% 0.0s
 Specify a filename to use
 
 ```
-» npx github:davethegr8/itap --filename example.png
+» npx pixxy --filename example.png
 Downloading Chromium r555668 - 76.4 Mb [====================] 100% 0.0s
 970ms saved example.png
 ```
@@ -39,7 +39,7 @@ Downloading Chromium r555668 - 76.4 Mb [====================] 100% 0.0s
 More info
 
 ```
-» npx github:davethegr8/itap --verbose true
+» npx pixxy --verbose true
 Downloading Chromium r555668 - 76.4 Mb [====================] 100% 0.0s
 1ms args { verbose: 'true',
   url: 'http://example.com',
