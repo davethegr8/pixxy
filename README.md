@@ -2,6 +2,16 @@
 
 Takes a picture of a webpage using Puppeteer
 
+### Global install
+
+The best way to use this is with a global install. That prevents it from downloading Chromium everytime you use it.
+
+```
+» npm i -g pixxy
+» pixxy
+964ms saved example-com-2018-05-16T21-18-57-904Z.png
+```
+
 ## Usage
 
 The simplest version:
@@ -34,6 +44,10 @@ Downloading Chromium r555668 - 76.4 Mb [====================] 100% 0.0s
 970ms saved example.png
 ```
 
+`--width [width]`
+
+Change the viewport width. Default is 1440, set to any value to change the page size.
+
 `--verbose true`
 
 More info
@@ -51,10 +65,4 @@ Downloading Chromium r555668 - 76.4 Mb [====================] 100% 0.0s
 995ms closing browser
 ```
 
-### Global install
 
-```
-» npm i -g pixxy
-» pixxy
-964ms saved example-com-2018-05-16T21-18-57-904Z.png
-```

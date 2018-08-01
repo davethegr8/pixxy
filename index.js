@@ -10,7 +10,8 @@ var diff;
 const defaults = {
   verbose: false,
   url: "http://example.com",
-  filename: null
+  filename: null,
+  width: 1440
 };
 
 var args = Object.assign(defaults, minimist(process.argv.slice(2)));
@@ -24,7 +25,7 @@ if (args.verbose) console.log(((new Date) - start) + 'ms', 'args', args);
   const page = await browser.newPage();
 
   // todo configurable width
-  let defaultViewport = { width: 1440, height: 1080 }
+  let defaultViewport = { width: args.width, height: 1080 }
   await page.setViewport(defaultViewport);
 
   if (args.verbose) console.log(((new Date) - start) + 'ms', 'loading ' + args.url);
@@ -38,6 +39,9 @@ if (args.verbose) console.log(((new Date) - start) + 'ms', 'args', args);
   });
 
   defaultViewport.height = dimensions.height;
+
+  await page.setViewport(defaultViewport);
+
   if (args.verbose) console.log(((new Date) - start) + 'ms', 'viewport:', defaultViewport);
 
   // todo date format
