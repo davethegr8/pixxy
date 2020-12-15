@@ -11,12 +11,34 @@ const defaults = {
   verbose: false,
   url: "http://example.com",
   filename: null,
-  width: 1440
+  width: 1440,
+  height: 1080,
+  resetHeight: true,
+  help: false,
 };
 
 var args = Object.assign(defaults, minimist(process.argv.slice(2)));
+args.verbose && console.log(args);
 
 if (args.verbose) console.log(((new Date) - start) + 'ms', 'args', args);
+
+if (args.help) {
+  const usage = `pixxy - a small utility to make an image of a webpage
+
+Options:
+--verbose: true | false    Show more logs
+--url: (required)
+--filename                 Save to this file
+--width: 1440
+--height: 1080
+--resetHeight
+--help
+  `;
+
+  console.log(usage);
+
+  process.exit();
+}
 
 (async () => {
   // todo save / show timing info
@@ -25,7 +47,7 @@ if (args.verbose) console.log(((new Date) - start) + 'ms', 'args', args);
   const page = await browser.newPage();
 
   // todo configurable width
-  let defaultViewport = { width: args.width, height: 1080 }
+  let defaultViewport = { width: args.width, height: args.height }
   await page.setViewport(defaultViewport);
 
   if (args.verbose) console.log(((new Date) - start) + 'ms', 'loading ' + args.url);
@@ -40,7 +62,9 @@ if (args.verbose) console.log(((new Date) - start) + 'ms', 'args', args);
 
   defaultViewport.height = dimensions.height;
 
-  await page.setViewport(defaultViewport);
+  if (args.resetHeight) {
+    await page.setViewport(defaultViewport);
+  }
 
   if (args.verbose) console.log(((new Date) - start) + 'ms', 'viewport:', defaultViewport);
 

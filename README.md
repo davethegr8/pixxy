@@ -48,6 +48,14 @@ Downloading Chromium r555668 - 76.4 Mb [====================] 100% 0.0s
 
 Change the viewport width. Default is 1440, set to any value to change the page size.
 
+`--height [height]`
+
+Change the viewport height. Default is 1080, set to any value to change the page size.
+
+`--resetHeight [true | false]`
+
+After page load, reset the height of the viewport to the height of the page to capture all content on the page.
+
 `--verbose true`
 
 More info
